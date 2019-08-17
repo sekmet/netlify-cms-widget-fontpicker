@@ -7,6 +7,10 @@ A Google Font Picker widget for Netlify CMS.
 As an npm package:
 
 ```shell
+yarn add netlify-cms-widget-fontpicker
+
+OR
+
 npm install --save netlify-cms-widget-fontpicker
 ```
 
