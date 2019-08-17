@@ -39,7 +39,7 @@ Add to your Netlify CMS configuration:
 
 Add your *Google Fonts Api key* as a enviromental variable
 
-### GOOGLE_FONTS_API_KEY=<YOUR-KEY>
+GOOGLE_FONTS_API_KEY=*YOUR-KEY*
 
 ## Support
 
