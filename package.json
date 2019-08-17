@@ -10,6 +10,7 @@
     "google"
   ],
   "version": "0.3.0",
+  "author": "Carlos Guimarães <sekmet@open4g.com>",
   "homepage": "https://github.com/sekmet/netlify-cms-widget-fontpicker",
   "license": "MIT",
   "main": "dist/main.js",
