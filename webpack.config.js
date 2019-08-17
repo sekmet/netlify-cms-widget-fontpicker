@@ -44,4 +44,5 @@ const productionConfig = {
   devtool: 'source-map',
 }
 
+
 module.exports = process.env.NODE_ENV === 'production' ? productionConfig : developmentConfig

@@ -9,13 +9,20 @@
     "font-picker",
     "google"
   ],
-  "version": "0.3.0",
+  "version": "0.3.1",
   "author": "Carlos Guimarães <sekmet@open4g.com>",
   "homepage": "https://github.com/sekmet/netlify-cms-widget-fontpicker",
   "license": "MIT",
   "main": "dist/main.js",
   "devDependencies": {
-    "babel-loader": "^7.1.4",
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/preset-typescript": "^7.3.3",
+    "babel-core": "6.26.3",
+    "babel-loader": "^8.0.6",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-export-extensions": "^6.22.0",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
@@ -25,19 +32,36 @@
     "css-loader": "^0.28.11",
     "html-webpack-plugin": "^3.2.0",
     "netlify-cms": "^1.5.0",
-    "react": "^16.3.2",
+    "react": "^16.8.10",
     "source-map-loader": "^0.2.3",
     "style-loader": "^0.20.3",
     "webpack": "^4.6.0",
-    "webpack-cli": "^2.0.14",
+    "webpack-cli": "3.2.3",
     "webpack-serve": "^0.3.1"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-typescript",
+      "@babel/react",
+      [
+        "@babel/preset-env",
+        {
+          "modules": false
+        }
+      ]
+    ],
+    "plugins": [
+      "@babel/plugin-proposal-class-properties"
+    ]
   },
   "dependencies": {
     "font-picker-react": "^3.3.0",
-    "prop-types": "^15.6.1"
+    "prop-types": "^15.7.2"
   },
   "peerDependencies": {
-    "react": "^16"
+    "@types/react": "^16.8.10",
+    "babel-core": "^6.26.3",
+    "react": "^16.8.10"
   },
   "scripts": {
     "start": "webpack-serve --log-level error --open-path '/#/collections/test/entries/test'",

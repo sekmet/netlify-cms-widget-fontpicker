@@ -34,6 +34,7 @@ export default class Control extends React.Component {
       classNameWrapper,
     } = this.props;
 
+    ////{process.env.GATSBY_GOOGLE_FONTS_API_KEY ? process.env.GATSBY_GOOGLE_FONTS_API_KEY : process.env.GOOGLE_FONTS_API_KEY}
     return (
       <div>
         <FontPicker

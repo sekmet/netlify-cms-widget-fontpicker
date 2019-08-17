@@ -45,6 +45,7 @@ Add your *Google Fonts Api key* as a enviromental variable
 
 GOOGLE_FONTS_API_KEY=*YOUR-KEY*
 
+
 ## Support
 
 For help with this widget, open an [issue](https://github.com/sekmet/netlify-cms-widget-fontpicker) or ask the Netlify CMS community in [Gitter](https://gitter.im/netlify/netlifycms).
