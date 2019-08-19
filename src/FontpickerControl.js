@@ -42,7 +42,7 @@ export default class FontpickerControl extends React.Component {
       <div style={{width: '100%'}}>
         <FontPicker
           id={forID}
-          apiKey={process.env.GATSBY_GOOGLE_FONTS_API_KEY ? process.env.GATSBY_GOOGLE_FONTS_API_KEY : process.env.GOOGLE_FONTS_API_KEY} //'AIzaSyDk-dW0JU7GFHrX3Pg_cgTUvJwH3G2FPhs'
+          apiKey={process.env.GATSBY_GOOGLE_FONTS_API_KEY ? process.env.GATSBY_GOOGLE_FONTS_API_KEY : process.env.GOOGLE_FONTS_API_KEY}
           className={classNameWrapper}
           activeFontFamily={value || this.state.activeFontFamily }
           value={value || '' }
