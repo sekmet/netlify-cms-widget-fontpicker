@@ -1,6 +1,10 @@
 # netlify-cms-widget-fontpicker
 
 A Google Font Picker widget for Netlify CMS.
+[![npm version](https://badge.fury.io/js/netlify-cms-widget-fontpicker.svg)](https://badge.fury.io/js/netlify-cms-widget-fontpicker)
+[![GitHub version](https://badge.fury.io/gh/sekmet%2Fnetlify-cms-widget-fontpicker.svg)](https://badge.fury.io/gh/sekmet%2Fnetlify-cms-widget-fontpicker)
+[![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
+
 
 ## Install
 
