@@ -15,19 +15,11 @@ npm install --save netlify-cms-widget-fontpicker
 ```
 
 ```js
-import * as FontPicker from 'netlify-cms-widget-fontpicker'
+import NetlifyCmsWidgetFontpicker from 'netlify-cms-widget-fontpicker';
 
-CMS.registerWidget('fontpicker', FontPicker.Control, FontPicker.Preview)
-```
-
-Via `script` tag:
-
-```html
-<script src="https://unpkg.com/netlify-cms-widget-fontpicker@^0.4.0"></script>
-
-<script>
-  CMS.registerWidget('fontpicker')
-</script>
+CMS.registerWidget([
+  NetlifyCmsWidgetFontpicker.Widget()
+])
 ```
 
 ## How to use
