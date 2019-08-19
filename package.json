@@ -1,72 +1,34 @@
 {
   "name": "netlify-cms-widget-fontpicker",
-  "description": "A Google Font Picker widget for Netlify CMS.",
+  "description": "A google font picker Widget for Netlify CMS.",
+  "version": "0.4.0",
+  "author": "Carlos Guimarães <sekmet@open4g.com>",
+  "homepage": "https://github.com/sekmet/netlify-cms-widget-fontpicker",
+  "repository": "https://github.com/sekmet/netlify-cms-widget-fontpicker",
+  "bugs": "https://github.com/netlify/netlify-cms/issues",
+  "module": "dist/esm/index.js",
+  "main": "dist/netlify-cms-widget-fontpicker.js",
+  "license": "MIT",
   "keywords": [
     "netlify",
     "netlify-cms",
-    "cms",
     "widget",
     "font-picker",
     "google"
   ],
-  "version": "0.3.1",
-  "author": "Carlos Guimarães <sekmet@open4g.com>",
-  "homepage": "https://github.com/sekmet/netlify-cms-widget-fontpicker",
-  "license": "MIT",
-  "main": "dist/main.js",
-  "devDependencies": {
-    "@babel/cli": "^7.5.5",
-    "@babel/core": "^7.5.5",
-    "@babel/plugin-proposal-class-properties": "^7.5.5",
-    "@babel/preset-env": "^7.5.5",
-    "@babel/preset-react": "^7.0.0",
-    "@babel/preset-typescript": "^7.3.3",
-    "babel-core": "6.26.3",
-    "babel-loader": "^8.0.6",
-    "babel-plugin-transform-class-properties": "^6.24.1",
-    "babel-plugin-transform-export-extensions": "^6.22.0",
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-preset-env": "^1.6.1",
-    "babel-preset-react": "^6.24.1",
-    "cross-env": "^5.1.4",
-    "css-loader": "^0.28.11",
-    "html-webpack-plugin": "^3.2.0",
-    "netlify-cms": "^1.5.0",
-    "react": "^16.8.10",
-    "source-map-loader": "^0.2.3",
-    "style-loader": "^0.20.3",
-    "webpack": "^4.6.0",
-    "webpack-cli": "3.2.3",
-    "webpack-serve": "^0.3.1"
-  },
-  "babel": {
-    "presets": [
-      "@babel/preset-typescript",
-      "@babel/react",
-      [
-        "@babel/preset-env",
-        {
-          "modules": false
-        }
-      ]
-    ],
-    "plugins": [
-      "@babel/plugin-proposal-class-properties"
-    ]
+  "sideEffects": false,
+  "scripts": {
+    "develop": "yarn build:esm --watch",
+    "build": "cross-env NODE_ENV=production webpack",
+    "build:esm": "cross-env NODE_ENV=esm babel src --out-dir dist/esm --ignore \"**/__tests__\" --root-mode upward"
   },
   "dependencies": {
-    "font-picker-react": "^3.3.0",
-    "prop-types": "^15.7.2"
+    "font-picker-react": "^3.3.0"
   },
   "peerDependencies": {
+    "netlify-cms-ui-default": "^2.6.0",
+    "prop-types": "^15.7.2",
     "@types/react": "^16.8.10",
-    "babel-core": "^6.26.3",
     "react": "^16.8.10"
-  },
-  "scripts": {
-    "start": "webpack-serve --log-level error --open-path '/#/collections/test/entries/test'",
-    "demo": "webpack --display errors-only --devtool source-map",
-    "build": "cross-env NODE_ENV=production webpack",
-    "prepublishOnly": "npm run build"
   }
 }

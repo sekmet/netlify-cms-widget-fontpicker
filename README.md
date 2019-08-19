@@ -23,10 +23,10 @@ CMS.registerWidget('fontpicker', FontPicker.Control, FontPicker.Preview)
 Via `script` tag:
 
 ```html
-<script src="https://unpkg.com/netlify-cms-widget-fontpicker@^0.3.0"></script>
+<script src="https://unpkg.com/netlify-cms-widget-fontpicker@^0.4.0"></script>
 
 <script>
-  CMS.registerWidget('fontpicker', FontPicker.Control, FontPicker.Preview)
+  CMS.registerWidget('fontpicker')
 </script>
 ```
 
@@ -41,7 +41,7 @@ Add to your Netlify CMS configuration:
 
 ## Configuration
 
-Add your *Google Fonts Api key* as a enviromental variable
+Add your *Google Fonts API key* as a enviroment variable
 
 GOOGLE_FONTS_API_KEY=*YOUR-KEY*
 

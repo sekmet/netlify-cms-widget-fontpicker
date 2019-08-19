@@ -1,9 +1,12 @@
-import Control from './Control'
-import Preview from './Preview'
+import controlComponent from './FontpickerControl';
+import previewComponent from './FontpickerPreview';
 
-if (typeof window !== 'undefined') {
-  window.Control = Control
-  window.Preview = Preview
-}
+const Widget = (opts = {}) => ({
+  name: 'fontpicker',
+  controlComponent,
+  previewComponent,
+  ...opts,
+});
 
-export { Control, Preview }
+export const NetlifyCmsWidgetFontpicker = { Widget, controlComponent, previewComponent };
+export default NetlifyCmsWidgetFontpicker;
