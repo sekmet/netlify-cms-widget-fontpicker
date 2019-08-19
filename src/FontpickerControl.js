@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import FontPickerStyles from './fontpicker-widget.css';
 import FontPicker from "font-picker-react";
 const uniqid = require('uniqid');
+const pId = uniqid();
 
 export default class FontpickerControl extends React.Component {
     constructor(props) {
@@ -39,8 +40,6 @@ export default class FontpickerControl extends React.Component {
             setActiveStyle,
             setInactiveStyle,
         } = this.props;
-
-        const pId = uniqid();
 
         return (
                 <div
