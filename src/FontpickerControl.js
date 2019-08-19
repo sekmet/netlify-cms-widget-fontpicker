@@ -1,7 +1,8 @@
 /** @jsx jsx */
-import { jsx } from '@emotion/core';
+import { jsx, css } from '@emotion/core';
 import React from 'react';
 import PropTypes from 'prop-types';
+import FontPickerStyles from './fontpicker-widget.css';
 import FontPicker from "font-picker-react";
 const uniqid = require('uniqid');
 
@@ -42,11 +43,14 @@ export default class FontpickerControl extends React.Component {
         const pId = uniqid();
 
         return (
-            <div>
+                <div
+                css={css`
+                  ${FontPickerStyles};
+                `}>
                 <FontPicker
                     id={forID}
                     pickerId={pId}
-                    apiKey={process.env.GATSBY_GOOGLE_FONTS_API_KEY ? process.env.GATSBY_GOOGLE_FONTS_API_KEY : process.env.GOOGLE_FONTS_API_KEY} //'AIzaSyDk-dW0JU7GFHrX3Pg_cgTUvJwH3G2FPhs'
+                    apiKey={process.env.GATSBY_GOOGLE_FONTS_API_KEY ? process.env.GATSBY_GOOGLE_FONTS_API_KEY : process.env.GOOGLE_FONTS_API_KEY}
                     className={classNameWrapper}
                     activeFontFamily={value || this.state.activeFontFamily }
                     value={value || '' }

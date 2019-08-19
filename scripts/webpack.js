@@ -21,7 +21,7 @@ const rules = () => ({
   }),
   css: () => ({
     test: /\.css$/,
-    include: [/(ol|redux-notifications|react-datetime)/],
+    include: [/(ol|redux-notifications|react-datetime|fontpicker-widget)/],
     use: ['to-string-loader', 'css-loader'],
   }),
   svg: () => ({

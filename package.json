@@ -1,7 +1,7 @@
 {
   "name": "netlify-cms-widget-fontpicker",
   "description": "A google font picker Widget for Netlify CMS.",
-  "version": "0.4.3",
+  "version": "0.4.4",
   "author": "Carlos Guimarães <sekmet@open4g.com>",
   "homepage": "https://github.com/sekmet/netlify-cms-widget-fontpicker",
   "repository": "https://github.com/sekmet/netlify-cms-widget-fontpicker",
