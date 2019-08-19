@@ -5,12 +5,12 @@ import PropTypes from 'prop-types';
 import FontPickerStyles from './fontpicker-widget.css';
 import FontPicker from "font-picker-react";
 const uniqid = require('uniqid');
-const pId = uniqid();
 
 export default class FontpickerControl extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            pId: uniqid(),
             activeFontFamily: 'Open Sans',
         };
     }
@@ -48,7 +48,7 @@ export default class FontpickerControl extends React.Component {
                 `}>
                 <FontPicker
                     id={forID}
-                    pickerId={pId}
+                    pickerId={this.state.pId}
                     apiKey={process.env.GATSBY_GOOGLE_FONTS_API_KEY ? process.env.GATSBY_GOOGLE_FONTS_API_KEY : process.env.GOOGLE_FONTS_API_KEY}
                     className={classNameWrapper}
                     activeFontFamily={value || this.state.activeFontFamily }
@@ -67,7 +67,7 @@ export default class FontpickerControl extends React.Component {
                     }
                 />
 
-                <p className={`apply-font-${pId}`} style={{paddingTop: '9px'}}>The font will be applied to this text.</p>
+                <p className={`apply-font-${this.state.pId}`} style={{paddingTop: '9px'}}>The font will be applied to this text.</p>
 
             </div>
         );
