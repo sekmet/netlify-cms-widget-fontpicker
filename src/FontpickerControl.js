@@ -52,8 +52,8 @@ export default class FontpickerControl extends React.Component {
                     id={forID}
                     pickerId={this.state.pId}
                     apiKey={process.env.GATSBY_GOOGLE_FONTS_API_KEY ? process.env.GATSBY_GOOGLE_FONTS_API_KEY : process.env.GOOGLE_FONTS_API_KEY}
-                    activeFontFamily={`${value}`.split(',')[0] || this.state.activeFontFamily }
-                    value={value || '' }
+                    activeFontFamily={`${value}`.split(',')[0] || `${this.state.activeFontFamily}`.split(',')[0] }
+                    value={`${value}`.split(',')[0] || '' }
                     onFocus={setActiveStyle}
                     onBlur={setInactiveStyle}
                     onChange={nextFont => {
