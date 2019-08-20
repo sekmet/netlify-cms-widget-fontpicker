@@ -12,6 +12,7 @@ export default class FontpickerControl extends React.Component {
         this.state = {
             pId: uniqid(),
             activeFontFamily: 'Open Sans',
+            activeFontCategory: 'sans-serif'
         };
     }
 
@@ -51,18 +52,18 @@ export default class FontpickerControl extends React.Component {
                     id={forID}
                     pickerId={this.state.pId}
                     apiKey={process.env.GATSBY_GOOGLE_FONTS_API_KEY ? process.env.GATSBY_GOOGLE_FONTS_API_KEY : process.env.GOOGLE_FONTS_API_KEY}
-                    activeFontFamily={value || this.state.activeFontFamily }
+                    activeFontFamily={`${value}`.split(',')[0] || this.state.activeFontFamily }
                     value={value || '' }
                     onFocus={setActiveStyle}
                     onBlur={setInactiveStyle}
                     onChange={nextFont => {
                         this.setState({
                             activeFontFamily: nextFont.family,
-                            activeFontCategory: nextFont.category
+                            activeFontCategory: nextFont.category ? nextFont.category : 'san-serif'
                         })
                         //console.log(this.state.activeFontFamily, nextFont.category)
                         //return onChange(`('${this.state.activeFontFamily}', ${nextFont.category ? nextFont.category : 'sans-serif'})`)
-                        return onChange(`${this.state.activeFontFamily}`)
+                        return onChange(`${this.state.activeFontFamily},${this.state.activeFontCategory}`)
                     }
                     }
                 />

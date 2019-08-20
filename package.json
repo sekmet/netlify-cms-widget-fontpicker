@@ -1,7 +1,7 @@
 {
   "name": "netlify-cms-widget-fontpicker",
   "description": "A google font picker Widget for Netlify CMS.",
-  "version": "0.4.7",
+  "version": "0.5.0",
   "author": "Carlos Guimarães <sekmet@open4g.com>",
   "homepage": "https://github.com/sekmet/netlify-cms-widget-fontpicker",
   "repository": "https://github.com/sekmet/netlify-cms-widget-fontpicker",
@@ -87,8 +87,11 @@
     "uniqid": "^5.0.3"
   },
   "peerDependencies": {
-    "@types/react": "^16.8.10",
+    "@emotion/core": "^10.0.9",
+    "@emotion/styled": "^10.0.9",
+    "lodash": "^4.17.11",
+    "@types/react": "^16.8.4",
     "prop-types": "^15.7.2",
-    "react": "^16.8.10"
+    "react": "^16.8.4"
   }
 }
